@@ -4,7 +4,6 @@
 // false altrimenti
 
 function isInString(s, t) {
-  return s.indexOf(t) > -1
 }
 
 module.exports = isInString

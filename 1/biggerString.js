@@ -3,7 +3,6 @@
 // ritorni la piu' lunga
 
 function biggerString(a, b) {
-  return a.length > b.length ? a : b
 }
 
 module.exports = biggerString
