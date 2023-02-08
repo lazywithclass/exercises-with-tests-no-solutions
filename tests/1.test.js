@@ -8,6 +8,7 @@ const sum = require('../1/sum.js')
 const even = require('../1/even.js')
 const countNoSpaces = require('../1/countNoSpaces.js')
 const isInArray = require('../1/isInArray.js')
+const isInString = require('../1/isInString.js')
 
 test("1/isDivisible", async function() {
   expect(isDivisible(1, 2)).toBe(false)
@@ -61,4 +62,9 @@ test("1/countNoSpaces", async function() {
 test("1/isInArray", async function() {
   expect(isInArray(1, [1,2,3])).toBe(true);
   expect(isInArray(0, [1,2,3])).toBe(false);
-});
+})
+
+test("1/isInString", async function() {
+  expect(isInString("Fantaghiro", "ghiro")).toBe(true);
+  expect(isInString("Hercules", "Batman")).toBe(false);
+})
