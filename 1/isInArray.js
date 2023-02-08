@@ -3,6 +3,7 @@
 // ritorna true se il numero e' presente nell'array
 // false altrimenti
 
-function isInArray() {
-  
+function isInArray(n, ns) {
 }
+
+module.exports = isInArray

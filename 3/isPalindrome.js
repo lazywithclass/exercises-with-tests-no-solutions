@@ -10,7 +10,6 @@
 // ad esempio con "123421" ritorna false
 
 function isPalindrome(string) {
-  return string === string.split('').reverse().join('')
 }
 
 module.exports = isPalindrome

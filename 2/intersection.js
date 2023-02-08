@@ -7,10 +7,6 @@
 
 
 function intersection(a, b) {
-    let t
-    // indexOf to loop over shorter
-    if (b.length > a.length) t = b, b = a, a = t 
-    return a.filter(e => b.indexOf(e) > -1)
 }
 
 module.exports = intersection

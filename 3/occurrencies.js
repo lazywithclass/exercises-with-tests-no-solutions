@@ -9,14 +9,6 @@
 
 
 function occurrencies(word) {
-  const occ = {}
-  for (let char of word) {
-    if (occ[char]) occ[char] += 1
-    else occ[char] = 1
-  }
-  let vals = Object.values(occ)
-  vals.sort()
-  return vals
 }
 
 module.exports = occurrencies

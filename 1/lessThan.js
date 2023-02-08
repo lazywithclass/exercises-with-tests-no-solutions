@@ -3,7 +3,6 @@
 // false altrimenti
 
 function lessThan(a, b) {
-  return a < b
 }
 
 module.exports = lessThan
