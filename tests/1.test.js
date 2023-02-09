@@ -10,6 +10,7 @@ const countNoSpaces = require('../1/countNoSpaces.js')
 const isInArray = require('../1/isInArray.js')
 const isInString = require('../1/isInString.js')
 const biggerString = require('../1/biggerString.js')
+const createArray = require('../1/createArray.js')
 
 test("1/isDivisible", async function() {
   expect(isDivisible(1, 2)).toBe(false)
@@ -74,4 +75,12 @@ test("1/biggerString", async function() {
   expect(biggerString("Fantaghiro", "ghiro")).toBe("Fantaghiro");
   expect(biggerString("ciao", "hi")).toBe("ciao");
   expect(biggerString("ciao", "ciao")).toBe("ciao");
+})
+
+test("1/createArray", async function() {
+  expect(createArray(1)).toEqual([1])
+  expect(createArray(4)).toEqual([4,4,4,4])
+  expect(createArray(7)).toEqual([7,7,7,7,7,7,7])
+  expect(createArray(0)).toEqual([])
+  expect(createArray(-1)).toEqual([])
 })

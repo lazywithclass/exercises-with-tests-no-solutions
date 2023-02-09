@@ -6,6 +6,8 @@ const union = require('../2/union.js')
 const removeVowels = require('../2/removeVowels.js')
 const reverse = require('../2/reverse.js')
 const addUpFromNumber = require('../2/addUpFromNumber.js')
+const arraySwap = require('../2/arraySwap.js')
+const createRandomSortedArray = require('../2/createRandomSortedArray.js')
 
 test("2/largestSwap", async function() {
   expect(largestSwap(34)).toBe(false)
@@ -48,4 +50,20 @@ test("2/reverse", async function() {
 test("2/addUpFromNumber", async function() {
   expect(addUpFromNumber(4)).toBe(10);
   expect(addUpFromNumber(0)).toBe(0);
-});
+})
+
+test("2/arraySwap", async function() {
+  expect(arraySwap([1,2,3,4])).toEqual([2,1,4,3]);
+  expect(arraySwap([1,2,3])).toEqual([2,1,3]);
+  expect(arraySwap([])).toEqual([]);
+  expect(arraySwap([1])).toEqual([1]);
+})
+
+test("2/createRandomSortedArray", async function() {
+  let result = createRandomSortedArray(3)
+  expect(result.length).toBe(3)
+  expect(result[0] < result[1]).toBe(true)
+  expect(result[1] < result[2]).toBe(true)
+  expect(createRandomSortedArray(0)).toEqual([])
+  expect(createRandomSortedArray(-1)).toEqual([])
+})

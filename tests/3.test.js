@@ -4,6 +4,7 @@ const isPalindrome = require('../3/isPalindrome.js')
 const occurrencies = require('../3/occurrencies.js')
 const firstSum = require('../3/firstSum.js')
 const chessboard = require('../3/chessboard.js')
+const morse = require('../3/morse.js')
 
 
 test("3/noConditionals", async function() {
@@ -43,4 +44,9 @@ test("3/chessboard", async function() {
     [ '#', ' ', '#', ' ' ],
     [ ' ', '#', ' ', '#' ]
   ])
+})
+
+test("3/morse", async function() {
+  expect(morse('morse')).toEqual('-- --- .-. ... .')
+  expect(morse('supercalifragilisticoespiralidoso')).toEqual('... ..- .--. . .-. -.-. .- .-.. .. ..-. .-. .- --. .. .-.. .. ... - .. -.-. --- . ... .--. .. .-. .- .-.. .. -.. --- ... ---')
 })
