@@ -8,6 +8,8 @@ const reverse = require('../2/reverse.js')
 const addUpFromNumber = require('../2/addUpFromNumber.js')
 const arraySwap = require('../2/arraySwap.js')
 const createRandomSortedArray = require('../2/createRandomSortedArray.js')
+const mapsUnion = require('../2/mapsUnion.js')
+const firstMatrix = require('../2/firstMatrix.js')
 
 test("2/largestSwap", async function() {
   expect(largestSwap(34)).toBe(false)
@@ -66,4 +68,15 @@ test("2/createRandomSortedArray", async function() {
   expect(result[1] < result[2]).toBe(true)
   expect(createRandomSortedArray(0)).toEqual([])
   expect(createRandomSortedArray(-1)).toEqual([])
+})
+
+test("2/mapsUnion", async function() {
+  expect(mapsUnion({a: 1, b: 2}, {c: 3, d: 4})).toEqual({a: 1, b: 2, c: 3, d: 4})
+  expect(mapsUnion({a: 1, b: 2}, {b: 3})).toEqual({a: 1, b: 3})
+})
+
+test("2/firstMatrix", async function() {
+  expect(firstMatrix([3,4,5], 1)).toEqual([[3,4,5]])
+  expect(firstMatrix([3,4,5], 0)).toEqual([])
+  expect(firstMatrix([3,4,5], 4)).toEqual([[3,4,5],[3,4,5],[3,4,5],[3,4,5]])
 })

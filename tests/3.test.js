@@ -5,6 +5,7 @@ const occurrencies = require('../3/occurrencies.js')
 const firstSum = require('../3/firstSum.js')
 const chessboard = require('../3/chessboard.js')
 const morse = require('../3/morse.js')
+const mergeSortedArrays = require('../3/mergeSortedArrays.js')
 
 
 test("3/noConditionals", async function() {
@@ -49,4 +50,11 @@ test("3/chessboard", async function() {
 test("3/morse", async function() {
   expect(morse('morse')).toEqual('-- --- .-. ... .')
   expect(morse('supercalifragilisticoespiralidoso')).toEqual('... ..- .--. . .-. -.-. .- .-.. .. ..-. .-. .- --. .. .-.. .. ... - .. -.-. --- . ... .--. .. .-. .- .-.. .. -.. --- ... ---')
+})
+
+test("3/mergeSortedArrays", async function() {
+  expect(mergeSortedArrays([2,3], [4,5])).toEqual([2,3,4,5])
+  expect(mergeSortedArrays([1,3,5], [2,4,6])).toEqual([1,2,3,4,5,6])
+  expect(mergeSortedArrays([1,2,3], [])).toEqual([1,2,3])
+  expect(mergeSortedArrays([], [0])).toEqual([0])
 })
