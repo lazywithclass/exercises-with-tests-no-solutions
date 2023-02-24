@@ -4,7 +4,7 @@
 // modificare questo array per eseguire solo alcuni dei test,
 // basta inserire il/i nome/i della funzione che si vuole testare
 const TEST_DA_ESEGUIRE = [
-  'firstMatrix'
+  'mapString'
 ]
 
 // non modificare la parte sottostante

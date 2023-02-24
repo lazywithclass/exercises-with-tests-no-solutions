@@ -6,6 +6,8 @@ const firstSum = require('../3/firstSum.js')
 const chessboard = require('../3/chessboard.js')
 const morse = require('../3/morse.js')
 const mergeSortedArrays = require('../3/mergeSortedArrays.js')
+const filterString = require('../3/filterString.js')
+const mapString = require('../3/mapString.js')
 
 
 test("3/noConditionals", async function() {
@@ -57,4 +59,16 @@ test("3/mergeSortedArrays", async function() {
   expect(mergeSortedArrays([1,3,5], [2,4,6])).toEqual([1,2,3,4,5,6])
   expect(mergeSortedArrays([1,2,3], [])).toEqual([1,2,3])
   expect(mergeSortedArrays([], [0])).toEqual([0])
+})
+
+test("3/filterString", async function() {
+  expect(filterString(l => l == "a","abba")).toEqual("aa")
+  expect(filterString(l => l == "c","abba")).toEqual("")
+  expect(filterString(l => l != "d","abcba")).toEqual("abcba")
+})
+
+test("3/mapString", async function() {
+  expect(mapString(l => `-${l}-`,"abc")).toEqual("-a--b--c-")
+  expect(mapString(l => `${l}|`,"abc")).toEqual("a|b|c|")
+  expect(mapString(l => l,"abc")).toEqual("abc")
 })
