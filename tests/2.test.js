@@ -10,6 +10,8 @@ const arraySwap = require('../2/arraySwap.js')
 const createRandomSortedArray = require('../2/createRandomSortedArray.js')
 const mapsUnion = require('../2/mapsUnion.js')
 const firstMatrix = require('../2/firstMatrix.js')
+const concatAll = require('../2/concatAll.js')
+const alfabetoStrambo = require('../2/alfabetoStrambo.js')
 
 test("2/largestSwap", async function() {
   expect(largestSwap(34)).toBe(false)
@@ -79,4 +81,16 @@ test("2/firstMatrix", async function() {
   expect(firstMatrix([3,4,5], 1)).toEqual([[3,4,5]])
   expect(firstMatrix([3,4,5], 0)).toEqual([])
   expect(firstMatrix([3,4,5], 4)).toEqual([[3,4,5],[3,4,5],[3,4,5],[3,4,5]])
+})
+
+test("2/concatAll", async function() {
+  expect(concatAll([1,2,3], [4,5,6], [7])).toEqual([1,2,3,4,5,6,7])
+  expect(concatAll([], [1], [2])).toEqual([1,2])
+})
+
+test("2/alfabetoStrambo", async function() {
+  expect(alfabetoStrambo("ciao a tutti")).toEqual("ciaoro ara tuttiri")
+  expect(alfabetoStrambo("a a")).toEqual("ara ara")
+  expect(alfabetoStrambo("")).toEqual("")
+  expect(alfabetoStrambo("funziona solo con vocali alla fine")).toEqual("funzionara soloro con vocaliri allara finere")
 })

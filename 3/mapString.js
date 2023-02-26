@@ -1,6 +1,6 @@
 // scrivere una funzione chiamata mapString
 // che prende in ingresso una funzione e una stringa
-// la funzione deve ritornare una nuova stringa
+// la funzione mapString deve ritornare una nuova stringa
 // le cui lettere sono il risultato dell'applicazione
 // della funzione all'i-esima lettera
 

@@ -8,6 +8,7 @@ const morse = require('../3/morse.js')
 const mergeSortedArrays = require('../3/mergeSortedArrays.js')
 const filterString = require('../3/filterString.js')
 const mapString = require('../3/mapString.js')
+const reduceString = require('../3/reduceString.js')
 
 
 test("3/noConditionals", async function() {
@@ -72,3 +73,9 @@ test("3/mapString", async function() {
   expect(mapString(l => `${l}|`,"abc")).toEqual("a|b|c|")
   expect(mapString(l => l,"abc")).toEqual("abc")
 })
+
+test("3/reduceString", async function() {
+  expect(reduceString(l => l == "a" ? 1 : 2,"abc")).toEqual(5)
+  expect(reduceString(l => (l == "1" || l == "2") ? 0 : 1,"12123")).toEqual(1)
+})
+
