@@ -1,6 +1,8 @@
 // scrivere una funzione chiamata createRandomSortedArray che 
 // dato un numero n in ingresso
-// ritorni un array lungo n che contiene numeri casuali compresi 0 e 1,
+// ritorni un array ordinato in
+// modo crescente lungo n che
+// contiene numeri casuali compresi tra 0 e 1,
 // estremi esclusi
 
 // ad esempio per 3 puo' ritornare
