@@ -13,11 +13,9 @@
 // ad esempio con false e false ritorna false
 
 function nand(b1, b2) {
-  return !(b1 && b2)
 }
 
 function andGate(b1, b2) {
-  return nand(nand(b1, b2), nand(b1, b2))
 }
 
 module.exports = andGate
