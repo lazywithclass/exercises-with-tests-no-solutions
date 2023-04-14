@@ -13,9 +13,10 @@
 // ad esempio con false e false ritorna false
 
 function nand(b1, b2) {
+  return !(b1 && b2)
 }
 
-function andGate(b1, b2) {
+function orGate(b1, b2) {
 }
 
-module.exports = andGate
+module.exports = orGate

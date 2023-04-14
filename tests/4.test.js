@@ -11,15 +11,15 @@ test("4/functionsReturningNumbers", async function() {
 })
 
 test("4/recursiveMap", async function() {
-  expect(recursiveMap([1,2,3], n => n * 2)).toEqual([2,4,6])
+  expect(recursiveMap([1, 2, 3], n => n * 2)).toEqual([2, 4, 6])
 })
 
 test("4/slice", async function() {
-  expect(slice([1,2,3,4,5], 2)).toEqual([[1,2],[3,4],[5]])
+  expect(slice([1, 2, 3, 4, 5], 2)).toEqual([[1, 2], [3, 4], [5]])
 })
 
 test("4/anagrams", async function() {
-  if (enabled.indexOf('4') == -1) return   
+  if (enabled.indexOf('4') == -1) return
   expect(anagrams("ciao", ["caio", "cio", "oiac", "bye"])).toEqual(['caio', 'oiac'])
 })
 
@@ -31,8 +31,8 @@ test("4/andGate", async function() {
 })
 
 test("4/orGate", async function() {
-  expect(orGate(false, false)).toEqual(true)
+  expect(orGate(false, false)).toEqual(false)
   expect(orGate(false, true)).toEqual(true)
   expect(orGate(true, false)).toEqual(true)
-  expect(orGate(true, true)).toEqual(false)
+  expect(orGate(true, true)).toEqual(true)
 })

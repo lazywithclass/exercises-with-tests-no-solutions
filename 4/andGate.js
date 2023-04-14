@@ -10,9 +10,10 @@
 // ad esempio con true e true ritorna true
 // ad esempio con true e false ritorna false
 // ad esempio con false e true ritorna false
-// ad esempio con false e false ritorna true
+// ad esempio con false e false ritorna false
 
 function nand(b1, b2) {
+  return !(b1 && b2)
 }
 
 function andGate(b1, b2) {
