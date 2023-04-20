@@ -12,6 +12,7 @@ const isInString = require('../1/isInString.js')
 const biggerString = require('../1/biggerString.js')
 const createArray = require('../1/createArray.js')
 const countUndefinedKeys = require('../1/countUndefinedKeys.js')
+const arrayNumbersPlusMinus1 = require('../1/arrayNumbersPlusMinus1.js')
 
 test("1/isDivisible", async function() {
   expect(isDivisible(1, 2)).toBe(false)
@@ -95,5 +96,10 @@ test("1/countUndefinedKeys", async function() {
   expect(countUndefinedKeys({
     c: 1
   })).toEqual(0)
+})
 
+test("1/arrayNumbersPlusMinus1", async function() {
+  expect(arrayNumbersPlusMinus1([1,2,3], 2)).toEqual([1,3])
+  expect(arrayNumbersPlusMinus1([2,5,8], 7)).toEqual([8])
+  expect(arrayNumbersPlusMinus1([2,6,8], 7)).toEqual([6,8])
 })

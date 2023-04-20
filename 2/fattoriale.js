@@ -7,7 +7,7 @@
 
 // https://en.wikipedia.org/wiki/Factorial
 
-function even(n) {
+function fattoriale(n) {
 }
 
-module.exports = even
+module.exports = fattoriale

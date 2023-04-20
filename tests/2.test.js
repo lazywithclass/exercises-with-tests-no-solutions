@@ -12,6 +12,7 @@ const mapsUnion = require('../2/mapsUnion.js')
 const firstMatrix = require('../2/firstMatrix.js')
 const concatAll = require('../2/concatAll.js')
 const alfabetoStrambo = require('../2/alfabetoStrambo.js')
+const fattoriale = require('../2/fattoriale.js')
 
 test("2/largestSwap", async function() {
   expect(largestSwap(34)).toBe(false)
@@ -93,4 +94,13 @@ test("2/alfabetoStrambo", async function() {
   expect(alfabetoStrambo("a a")).toEqual("ara ara")
   expect(alfabetoStrambo("")).toEqual("")
   expect(alfabetoStrambo("funziona solo con vocali alla fine")).toEqual("funzionara soloro con vocaliri allara finere")
+})
+
+test("2/fattoriale", async function() {
+  expect(fattoriale(0)).toEqual(1)
+  expect(fattoriale(1)).toEqual(1)
+  expect(fattoriale(2)).toEqual(2)
+  expect(fattoriale(3)).toEqual(6)
+  expect(fattoriale(4)).toEqual(24)
+  expect(fattoriale(5)).toEqual(120)
 })
