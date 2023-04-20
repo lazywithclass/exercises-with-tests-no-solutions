@@ -3,6 +3,7 @@ const recursiveMap = require('../4/recursiveMap.js')
 const slice = require('../4/slice.js')
 const anagrams = require('../4/anagrams.js')
 const andGate = require('../4/andGate.js')
+const orGate = require('../4/orGate.js')
 
 test("4/functionsReturningNumbers", async function() {
   expect(functionsReturningNumbers(() => 2, () => 1)).toBe("f")
