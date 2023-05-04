@@ -21,6 +21,7 @@ test("4/slice", async function() {
 
 test("4/anagrams", async function() {
   expect(anagrams("ciao", ["caio", "cio", "oiac", "bye"])).toEqual(['caio', 'oiac'])
+  expect(anagrams("ops", ["sop", "hey", "pos", "osp", 'aaaah'])).toEqual(['sop', 'pos', 'osp'])
 })
 
 test("4/andGate", async function() {
