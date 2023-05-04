@@ -20,3 +20,5 @@ function orGate(b1, b2) {
 }
 
 module.exports = orGate
+
+

@@ -20,6 +20,7 @@ test("3/findLongestSubstring", async function() {
   expect(findLongestSubstring("abcabcbb")).toBe("abc")
   expect(findLongestSubstring("bbbbb")).toBe("b")
   expect(findLongestSubstring("pwwkew")).toBe("wke")
+  expect(findLongestSubstring("casesssroma")).toBe("sroma")
 })
 
 test("3/isPalindrome", async function() {

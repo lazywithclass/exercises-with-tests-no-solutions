@@ -20,7 +20,6 @@ test("4/slice", async function() {
 })
 
 test("4/anagrams", async function() {
-  if (enabled.indexOf('4') == -1) return
   expect(anagrams("ciao", ["caio", "cio", "oiac", "bye"])).toEqual(['caio', 'oiac'])
 })
 
