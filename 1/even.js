@@ -1,11 +1,6 @@
-// scrivere una funzione chiamata fattoriale che 
-// dato un numero in ingresso
-// ritorni il fattoriale di quel numero
-
-// ad esempio per 3 deve ritornare 6
-// ad esempio per 4 deve ritornare 24
-
-// https://en.wikipedia.org/wiki/Factorial
+// scrivere una funzione chiamata even 
+// dato un array di numeri in ingresso
+// ritorni un nuovo array che contenga solo i numeri pari
 
 function even(n) {
 }
