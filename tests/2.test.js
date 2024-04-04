@@ -13,6 +13,8 @@ const firstMatrix = require('../2/firstMatrix.js')
 const concatAll = require('../2/concatAll.js')
 const alfabetoStrambo = require('../2/alfabetoStrambo.js')
 const fattoriale = require('../2/fattoriale.js')
+const arrayPairs = require('../2/arrayPairs.js')
+const minMax = require('../2/minMax.js')
 
 test("2/largestSwap", async function() {
   expect(largestSwap(34)).toBe(false)
@@ -58,8 +60,8 @@ test("2/addUpFromNumber", async function() {
 })
 
 test("2/arraySwap", async function() {
-  expect(arraySwap([1,2,3,4])).toEqual([2,1,4,3]);
-  expect(arraySwap([1,2,3])).toEqual([2,1,3]);
+  expect(arraySwap([1, 2, 3, 4])).toEqual([2, 1, 4, 3]);
+  expect(arraySwap([1, 2, 3])).toEqual([2, 1, 3]);
   expect(arraySwap([])).toEqual([]);
   expect(arraySwap([1])).toEqual([1]);
 })
@@ -74,19 +76,19 @@ test("2/createRandomSortedArray", async function() {
 })
 
 test("2/mapsUnion", async function() {
-  expect(mapsUnion({a: 1, b: 2}, {c: 3, d: 4})).toEqual({a: 1, b: 2, c: 3, d: 4})
-  expect(mapsUnion({a: 1, b: 2}, {b: 3})).toEqual({a: 1, b: 3})
+  expect(mapsUnion({ a: 1, b: 2 }, { c: 3, d: 4 })).toEqual({ a: 1, b: 2, c: 3, d: 4 })
+  expect(mapsUnion({ a: 1, b: 2 }, { b: 3 })).toEqual({ a: 1, b: 3 })
 })
 
 test("2/firstMatrix", async function() {
-  expect(firstMatrix([3,4,5], 1)).toEqual([[3,4,5]])
-  expect(firstMatrix([3,4,5], 0)).toEqual([])
-  expect(firstMatrix([3,4,5], 4)).toEqual([[3,4,5],[3,4,5],[3,4,5],[3,4,5]])
+  expect(firstMatrix([3, 4, 5], 1)).toEqual([[3, 4, 5]])
+  expect(firstMatrix([3, 4, 5], 0)).toEqual([])
+  expect(firstMatrix([3, 4, 5], 4)).toEqual([[3, 4, 5], [3, 4, 5], [3, 4, 5], [3, 4, 5]])
 })
 
 test("2/concatAll", async function() {
-  expect(concatAll([1,2,3], [4,5,6], [7])).toEqual([1,2,3,4,5,6,7])
-  expect(concatAll([], [1], [2])).toEqual([1,2])
+  expect(concatAll([1, 2, 3], [4, 5, 6], [7])).toEqual([1, 2, 3, 4, 5, 6, 7])
+  expect(concatAll([], [1], [2])).toEqual([1, 2])
 })
 
 test("2/alfabetoStrambo", async function() {
@@ -103,4 +105,18 @@ test("2/fattoriale", async function() {
   expect(fattoriale(3)).toEqual(6)
   expect(fattoriale(4)).toEqual(24)
   expect(fattoriale(5)).toEqual(120)
+})
+
+test("2/arrayPairs", async function() {
+  expect(arrayPairs([1, 2], [4, 5])).toEqual([[1, 4], [2, 5]])
+  expect(arrayPairs([1], [4, 5])).toEqual([[1, 4], [null, 5]])
+})
+
+test("2/minMax", async function() {
+  expect(minMax([1, 2, 4, 5])).toEqual([1, 5])
+  expect(minMax([-1, -5])).toEqual([-5, -1])
+  expect(minMax([])).toEqual([])
+  expect(minMax([-5, -4, -3, -2])).toEqual([-5, -2])
+  expect(minMax([1])).toEqual([1, 1])
+
 })
